@@ -1,7 +1,7 @@
 import NavBar from "./Navbar"
 
 export default function Page() {
-  return <div className="flex bg">
+  return <div>
         <NavBar />
   </div>
 }
