@@ -1,8 +1,6 @@
-export default function Navbar () {
+export default function NavBar () {
 
     return (
-        <div className="fixed top-0 text-center">
-            <p>Weather App</p>
-        </div>
-    )
+        <p className="text-fuchsia-600">Weather App</p>
+    );
 }
