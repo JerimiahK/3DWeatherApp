@@ -1,4 +1,4 @@
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import {
   CameraControls,
   PerspectiveCamera,
@@ -14,7 +14,6 @@ export default function Scene() {
   return (
     <Canvas style={{ width: "100vw", height: "100vh" }}>
       <color attach="background" args={["#151520"]} />
-      {/* <Sky sunPosition={[150, 80, 150]} /> */}
       <CameraControls />
       <OrthographicCamera position={[0, 3, -11]}>
         {/* Weather App Text */}
