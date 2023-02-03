@@ -9,13 +9,20 @@ import {
   GradientTexture,
 } from "@react-three/drei";
 import Sun from "./SunModel";
+import Moon from "./MoonModel";
 
 export default function Scene() {
   return (
-    <Canvas camera={{ fov: "105", position: [2, -4, 20] }} style={{ width: "100%", height: "100vh" }}>
+    <Canvas
+      camera={{ fov: "110", position: [2, -4, 20] }}
+      style={{ width: "100%", height: "100vh" }}
+    >
       <color attach="background" args={["#151520"]} />
-      <mesh scale={.3} position={[12, 9, 2.5]}>
+      <mesh scale={0.3} position={[-1, 20, 0]}>
         <Sun />
+      </mesh>
+      <mesh scale={3} position={[-1, -20, 0]}>
+        <Moon />
       </mesh>
       {/* Weather App Text */}
       <Center rotation={[0.6, 0, 0]} position={[5, 4, 0]}>
@@ -62,7 +69,7 @@ export default function Scene() {
         </Text3D>
       </Center>
       {/* Search Text */}
-      <Center position={[-9, 3, 5]} rotation={[0.2, 1, 0]}>
+      <Center position={[-8.5, 3, 5]} rotation={[0.2, 1, 0]}>
         <Text3D
           curveSegments={32}
           bevelEnabled
