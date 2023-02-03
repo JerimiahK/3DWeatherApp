@@ -10,6 +10,7 @@ import {
 } from "@react-three/drei";
 import Sun from "./SunModel";
 import Moon from "./MoonModel";
+import Cloud from "./StormCloud";
 
 export default function Scene() {
   return (
@@ -18,12 +19,15 @@ export default function Scene() {
       style={{ width: "100%", height: "100vh" }}
     >
       <color attach="background" args={["#151520"]} />
-      <mesh scale={0.3} position={[-1, 20, 0]}>
+      <mesh scale={0.7} position={[-1, 22, 0]}>
         <Sun />
       </mesh>
-      <mesh scale={3} position={[-1, -20, 0]}>
-        <Moon />
+      <mesh scale={2.5} position={[-12, 15, 0]}>
+        <Cloud />
       </mesh>
+      {/* <mesh scale={3} position={[-1, -20, 0]}>
+        <Moon />
+      </mesh> */}
       {/* Weather App Text */}
       <Center rotation={[0.6, 0, 0]} position={[5, 4, 0]}>
         <Text3D
@@ -47,7 +51,7 @@ export default function Scene() {
         </Text3D>
       </Center>
       {/* Local Forecast Text */}
-      <Center position={[5, -1, 0]}>
+      <Center position={[5.2, 0, 0]}>
         <Text3D
           curveSegments={32}
           bevelEnabled
