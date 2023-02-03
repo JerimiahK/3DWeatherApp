@@ -7,7 +7,7 @@ export default function Page() {
   return (
     <div>
       <Scene />
-      <SearchBar />
+      {/* <SearchBar /> */}
     </div>
   );
 }
