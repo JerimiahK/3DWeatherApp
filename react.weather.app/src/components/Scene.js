@@ -8,7 +8,7 @@ import AppText from "./AppText";
 export default function Scene() {
   return (
     <Canvas
-      camera={{ fov: "115", position: [2, -4, 20] }}
+      camera={{ fov: "100", position: [2, -4, 25] }}
       style={{ width: "100%", height: "100vh" }}
     >
       <color attach="background" args={["#151520"]} />
@@ -18,7 +18,7 @@ export default function Scene() {
       </mesh>
       {/* Storm Cloud Model */}
 
-      <mesh scale={2.5} position={[-12, 15, 0]}>
+      <mesh scale={2.5} position={[-12, 12, 3]}>
         <Cloud />
       </mesh>
 
