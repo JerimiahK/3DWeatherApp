@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-.searchBar {
-    background-color: #151520;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #1e6893;
+}
+
+@media screen and (min-width: 500px) {
+    .searchBar {
+        width: 50vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
