@@ -8,17 +8,17 @@ import AppText from "./AppText";
 export default function Scene() {
   return (
     <Canvas
-      camera={{ fov: "100", position: [2, -4, 25] }}
-      style={{ width: "100%", height: "100vh" }}
+      camera={{ fov: "105", position: [0, 0, 25] }}
+      style={{ width: "100%", height: "100vh", zIndex: "1" }}
     >
       <color attach="background" args={["#151520"]} />
       {/* Sun Model */}
-      <mesh scale={0.7} position={[-1, 22, 0]}>
+      <mesh scale={0.6} position={[0, 22, 0]}>
         <Sun />
       </mesh>
       {/* Storm Cloud Model */}
 
-      <mesh scale={2.5} position={[-12, 12, 3]}>
+      <mesh scale={2.5} position={[-11, 12, 2]}>
         <Cloud />
       </mesh>
 
@@ -26,9 +26,11 @@ export default function Scene() {
       <AppText />
 
       {/* Search Text */}
-      <Search />
+      <mesh>
+        <Search />
+      </mesh>
 
-      <OrbitControls makeDefault />
+      <OrbitControls makeDefault enableDamping />
 
       <Environment
         files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/syferfontein_0d_clear_puresky_1k.hdr"

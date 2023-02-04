@@ -3,7 +3,7 @@ import { Center, Text3D, GradientTexture } from "@react-three/drei";
 export default function AppText() {
   return (
     <mesh>
-      <Center rotation={[0.6, 0, 0]} position={[5, 4, 0]}>
+      <Center rotation={[0.6, 0, 0]} position={[7, 4, 0]}>
         <Text3D
           curveSegments={32}
           bevelEnabled
@@ -12,7 +12,7 @@ export default function AppText() {
           height={1}
           lineHeight={0}
           letterSpacing={-0.06}
-          size={3.5}
+          size={4}
           font="/Roboto_Regular.json"
         >
           WEATHER
@@ -25,7 +25,7 @@ export default function AppText() {
         </Text3D>
       </Center>
       {/* Local Forecast Text */}
-      <Center position={[5.2, 0, 0]}>
+      <Center position={[6.5, 0, 0]}>
         <Text3D
           curveSegments={32}
           bevelEnabled

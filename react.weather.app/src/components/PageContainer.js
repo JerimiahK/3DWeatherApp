@@ -5,8 +5,6 @@ import * as THREE from "three";
 
 export default function Page() {
   return (
-    <div>
       <Scene />
-    </div>
   );
 }
