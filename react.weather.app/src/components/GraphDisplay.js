@@ -1,7 +1,7 @@
-import { Text3D, Center } from "@react-three/drei";
+import { Text3D, Center, Text } from "@react-three/drei";
 import { useRef, useState } from "react";
 
-export default function Search() {
+export default function GraphDisplay() {
   const ref = useRef();
   const [clicked, showSearch] = useState(false);
   const [hovered, hover] = useState(false);
@@ -47,6 +47,13 @@ export default function Search() {
         </Text3D>
       </Center> */}
       <boxGeometry />
+      <Text
+        scale={0.1}
+        color="black"
+        position={[0, 0.4, 0.55]}
+      >
+        Current Weather
+      </Text>
       <meshBasicMaterial color="white" />
     </mesh>
   );

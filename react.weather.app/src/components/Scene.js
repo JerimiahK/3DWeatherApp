@@ -2,7 +2,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Environment } from "@react-three/drei";
 import Sun from "./SunModel";
 import Cloud from "./StormCloud";
-import Search from "./SearchText";
+import Graph from "./GraphDisplay";
 import AppText from "./AppText";
 
 export default function Scene() {
@@ -25,10 +25,8 @@ export default function Scene() {
       {/* Weather App Text */}
       <AppText />
 
-      {/* Search Text */}
-      <mesh>
-        <Search />
-      </mesh>
+      {/* Graph Screen */}
+        <Graph />
 
       <OrbitControls makeDefault enableDamping />
 
