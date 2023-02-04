@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-*{ 
-    color: #add8e65d;
+.searchBar {
+    background-color: #151520;
 }
