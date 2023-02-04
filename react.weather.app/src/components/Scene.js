@@ -8,7 +8,7 @@ import AppText from "./AppText";
 export default function Scene() {
   return (
     <Canvas
-      camera={{ fov: "105", position: [0, 0, 25] }}
+      camera={{ fov: "105", position: [0, 0, 27] }}
       style={{ width: "100%", height: "100vh", zIndex: "1" }}
     >
       <color attach="background" args={["#151520"]} />

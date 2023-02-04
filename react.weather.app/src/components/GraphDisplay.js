@@ -2,57 +2,28 @@ import { Text3D, Center, Text } from "@react-three/drei";
 import { useRef, useState } from "react";
 
 export default function GraphDisplay() {
-  const ref = useRef();
-  const [clicked, showSearch] = useState(false);
-  const [hovered, hover] = useState(false);
-
-  const searchBar = () => {
-    showSearch(true);
-  };
+  
 
   return (
-    <mesh position={[-11, 0, 5]} rotation={[0, 0.5, 0]} scale={[10.5, 10, 2]}>
-      {/* <Center position={[-8.5, 3, 5]} rotation={[0, 1, 0]}>
-        <Text3D
-          onClick={searchBar}
-          curveSegments={32}
-          bevelEnabled
-          bevelSize={0.04}
-          bevelThickness={0.01}
-          height={0.4}
-          lineHeight={0}
-          letterSpacing={-0.06}
-          size={2}
-          font="/Roboto_Regular.json"
-        >
-          Click To
-          <meshBasicMaterial color={hovered ? "#add8e65d" : "#ADD8E6"} />
-        </Text3D>
-      </Center>
-      <Center position={[-8.5, 0, 5]} rotation={[0, 1, 0]}>
-        <Text3D
-          onClick={searchBar}
-          curveSegments={32}
-          bevelEnabled
-          bevelSize={0.04}
-          bevelThickness={0.01}
-          height={0.4}
-          lineHeight={0}
-          letterSpacing={-0.06}
-          size={2}
-          font="/Roboto_Regular.json"
-        >
-          Search
-          <meshBasicMaterial color="#ADD8E6" />
-        </Text3D>
-      </Center> */}
+    <mesh position={[-11, 0, 5]} rotation={[0, 0.5, 0]} scale={[10.5, 15, 2]}>
       <boxGeometry />
-      <Text
-        scale={0.1}
-        color="black"
-        position={[0, 0.4, 0.55]}
-      >
+      <Text scale={0.1} color="black" position={[0, 0.4, 0.55]}>
         Current Weather
+      </Text>
+      <Text scale={0.1} color="black" position={[0, 0.3, 0.55]}>
+        02/04/2023
+      </Text>
+      <Text scale={0.1} color="black" position={[0, 0.17, 0.55]}>
+        Icon
+      </Text>
+      <Text scale={0.1} color="black" position={[-0.2, 0, 0.55]}>
+        Temp: 45
+      </Text>
+      <Text scale={0.1} color="black" position={[-0.18, -0.2, 0.55]}>
+        Wind: 45
+      </Text>
+      <Text scale={0.1} color="black" position={[-0.17, -0.4, 0.55]}>
+        Hum: 45
       </Text>
       <meshBasicMaterial color="white" />
     </mesh>
