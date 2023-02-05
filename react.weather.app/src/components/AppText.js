@@ -3,7 +3,7 @@ import { Center, Text3D, GradientTexture } from "@react-three/drei";
 export default function AppText() {
   return (
     <mesh>
-      <Center rotation={[0.6, 0, 0]} position={[7, 4, 0]}>
+      <Center rotation={[0.6, 0, 0]} position={[5, 9, 0]}>
         <Text3D
           curveSegments={32}
           bevelEnabled
@@ -12,20 +12,20 @@ export default function AppText() {
           height={1}
           lineHeight={0}
           letterSpacing={-0.06}
-          size={4}
+          size={5}
           font="/Roboto_Regular.json"
         >
           WEATHER
           <meshBasicMaterial>
             <GradientTexture
               stops={[0, 1]}
-              colors={["aquamarine", "hotpink"]} // Colors need to match the number of stops
+              colors={["#00A0CE", "white"]} // Colors need to match the number of stops
             />
           </meshBasicMaterial>
         </Text3D>
       </Center>
       {/* Local Forecast Text */}
-      <Center position={[6.5, 0, 0]}>
+      <Center position={[7, 5, 0]}>
         <Text3D
           curveSegments={32}
           bevelEnabled
@@ -34,14 +34,14 @@ export default function AppText() {
           height={0.6}
           lineHeight={0}
           letterSpacing={-0.06}
-          size={2.2}
+          size={2.7}
           font="/Roboto_Regular.json"
         >
           Local Forecast
           <meshBasicMaterial>
             <GradientTexture
               stops={[0, 1]}
-              colors={["aquamarine", "hotpink"]} // Colors need to match the number of stops
+              colors={["#00A0CE", "white"]} // Colors need to match the number of stops
             />
           </meshBasicMaterial>
         </Text3D>
