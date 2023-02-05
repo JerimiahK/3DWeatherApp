@@ -49,11 +49,11 @@ export default function SearchBar() {
             placeholder="Search City"
             required
           />
-          <button
+          {/* <button
             type="submit"
             className="text-white absolute right-0 bottom-0 bg-blue-900 hover:bg-blue-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-4 py-4 dark:bg-lightblue-800 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
-          </button>
+          </button> */}
         </div>
       </form>
     </Html>
