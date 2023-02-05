@@ -1,11 +1,30 @@
 import { Text } from "@react-three/drei";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import skyVideo from "../videos/skyVideo.mov";
 
-export default function GraphDisplay({ icon, date, temp, wind, humidity }) {
-  // let userSearch = citySearch.val();
-  let key = "0faaa42019c798356adf79d4415bbb25";
-  // let cityUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${userSearch}&appid=${key}`;
+export default function GraphDisplay({ userSearch }) {
+  const key = "a9fab27ee99c4f64b3c174452230502";
+  const apiURL = `http://api.weatherapi.com/v1/current.json?key=${key}&q=${userSearch}`;
+  const [url, setUrl] = useState(apiURL);
+  const [data, setData] = useState(); 
+
+  console.log(url);
+
+  useEffect(() => {
+    async function getData() {
+      const currentData = await fetch(url, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+      }).then((res) => res.json());
+      console.log(currentData);
+      setData(currentData)
+      setUrl(url)
+    }
+    getData();
+  }, [url]);
 
   const [video] = useState(() => {
     const vid = document.createElement("video");
@@ -23,20 +42,16 @@ export default function GraphDisplay({ icon, date, temp, wind, humidity }) {
       <Text scale={0.2} color="black" position={[0, 0.5, 0.01]}>
         Current Weather
       </Text>
-      <Text scale={0.15} color="black" position={[0, 0.3, 0.01]}>
-        {date}
-      </Text>
-      <Text scale={0.2} color="black" position={[0.6, 0, 0.01]}>
-        {icon}
-      </Text>
+      <Text scale={0.15} color="black" position={[0, 0.3, 0.01]}></Text>
+      <Text scale={0.2} color="black" position={[0.6, 0, 0.01]}></Text>
       <Text scale={0.2} color="black" position={[-0.2, 0, 0.01]}>
-        Temp: {temp}°F
+        Temp: °F
       </Text>
       <Text scale={0.2} color="black" position={[-0.18, -0.3, 0.01]}>
-        Wind: {wind}mph
+        Wind: mph
       </Text>
       <Text scale={0.2} color="black" position={[-0.17, -0.6, 0.01]}>
-        Humidity: {humidity}%
+        Humidity: %
       </Text>
       <meshBasicMaterial color="aquamarine">
         <videoTexture attach="map" args={[video]} />
