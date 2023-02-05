@@ -4,9 +4,9 @@ import Moon from "./MoonModel";
 import City from "./CityModel";
 import Mountain from "./Mountains";
 import Cloud from "./StormCloud";
-import Graph from "./GraphDisplay";
+import Graph from "./CurrentWeather";
 import AppText from "./AppText";
-import Sky from "../assets/sky2.hdr"
+import Sky from "../assets/sky.hdr"
 
 export default function Scene() {
   return (
