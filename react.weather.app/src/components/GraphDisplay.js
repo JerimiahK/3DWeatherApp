@@ -1,8 +1,18 @@
 import { Text3D, Center, Text } from "@react-three/drei";
 import { useRef, useState } from "react";
+import { VideoTexture } from "three";
+import skyVideo from "../videos/skyVideo.mp4"
+
 
 export default function GraphDisplay() {
-  
+
+  const [video] = useState(() => {
+    const vid = document.createElement("video");
+    vid.src = skyVideo;
+    vid.loop = true;
+    vid.play();
+    return vid;
+  });
 
   return (
     <mesh position={[-11, 0, 5]} rotation={[0, 0.5, 0]} scale={[10.5, 15, 2]}>
@@ -25,7 +35,9 @@ export default function GraphDisplay() {
       <Text scale={0.1} color="black" position={[-0.17, -0.4, 0.55]}>
         Hum: 45
       </Text>
-      <meshBasicMaterial color="white" />
+      <meshBasicMaterial color="aquamarine">
+        <videoTexture attach="map" args={[video]} />
+      </meshBasicMaterial>
     </mesh>
   );
 }
