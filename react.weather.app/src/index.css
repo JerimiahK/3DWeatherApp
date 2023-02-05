@@ -9,6 +9,10 @@
     background-color: #1e6893;
 }
 
+.searchBar {
+    width: 100vw;
+}
+
 @media screen and (min-width: 500px) {
     .searchBar {
         width: 50vh;
