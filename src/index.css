@@ -15,7 +15,11 @@
 
 @media screen and (min-width: 500px) {
     .searchBar {
+<<<<<<< HEAD
         width: 70vh;
+=======
+        width: 50vh;
+>>>>>>> 65af30fed206db87247d2335e6284c61086e2121
         margin-left: auto;
         margin-right: auto;
     }
