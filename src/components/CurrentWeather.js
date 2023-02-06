@@ -1,4 +1,4 @@
-import { Text, Html } from "@react-three/drei";
+import { Text } from "@react-three/drei";
 import { useState, useEffect } from "react";
 import skyVideo from "../videos/skyVideo.mov";
 import dayjs from "dayjs"
