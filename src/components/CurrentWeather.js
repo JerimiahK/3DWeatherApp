@@ -8,7 +8,6 @@ export default function GraphDisplay({ userSearch }) {
   let apiURL = `http://api.weatherapi.com/v1/current.json?key=${key}&q=${userSearch}`;
   const [data, setData] = useState();
   const date = dayjs().format("MM/DD/YYYY");
-  console.log(date);
 
   useEffect(() => {
     async function getData() {
@@ -19,7 +18,6 @@ export default function GraphDisplay({ userSearch }) {
           Accept: "application/json",
         },
       }).then((res) => res.json());
-      console.log(currentData.current);
       setData(currentData.current);
     }
     getData();
@@ -34,8 +32,6 @@ export default function GraphDisplay({ userSearch }) {
     vid.play();
     return vid;
   });
-
-  // console.log(data.condition.icon);
 
   return (
     <mesh position={[-9, -1, 5]} rotation={[0, 0.7, 0]} scale={[7, 7, 12]}>
