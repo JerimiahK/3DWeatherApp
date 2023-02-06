@@ -5,7 +5,7 @@ import dayjs from "dayjs"
 
 export default function GraphDisplay({ userSearch }) {
   const key = "a9fab27ee99c4f64b3c174452230502";
-  let apiURL = `http://api.weatherapi.com/v1/current.json?key=${key}&q=${userSearch}`;
+  let apiURL = `https://api.weatherapi.com/v1/current.json?key=${key}&q=${userSearch}`;
   const [data, setData] = useState();
   const date = dayjs().format("MM/DD/YYYY");
 
