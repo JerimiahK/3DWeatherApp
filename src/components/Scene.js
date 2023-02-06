@@ -1,19 +1,20 @@
+import React, { useState, lazy } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Environment } from "@react-three/drei";
+import { Html } from "@react-three/drei";
+// Model Imports
 import Moon from "./MoonModel";
 import City from "./CityModel";
 import Mountain from "./Mountains";
 import Cloud from "./StormCloud";
-import CurrentWeather from "./CurrentWeather";
+// import CurrentWeather from "./CurrentWeather";
 import AppText from "./AppText";
 import Sky from "../assets/sky.hdr";
-import { Html } from "@react-three/drei";
-import React, { useState } from "react";
+const CurrentWeather = lazy(() => import("./CurrentWeather"));
 
 export default function Scene() {
   const [userSearch, setUserSearch] = useState("");
 
-  // Handle change function - setting user search state from input value
   const handleChange = (event) => {
     const userInput = event.target.value;
     setUserSearch(userInput);
@@ -21,7 +22,7 @@ export default function Scene() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-     return setUserSearch(userSearch); 
+    return setUserSearch(userSearch);
   };
 
   return (
@@ -96,7 +97,7 @@ export default function Scene() {
       <AppText />
 
       {/* Current Weather */}
-      <CurrentWeather userSearch={userSearch} />
+        <CurrentWeather userSearch={userSearch} />
 
       <OrbitControls makeDefault enableDamping />
 
