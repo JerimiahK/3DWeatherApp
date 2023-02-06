@@ -6,7 +6,7 @@ import dayjs from "dayjs";
 export default function GraphDisplay({ userSearch }) {
   const key = "a9fab27ee99c4f64b3c174452230502";
   let apiURL = `https://api.weatherapi.com/v1/current.json?key=${key}&q=${userSearch}`;
-  const [data, setData] = useState();
+  const [data, setData] = useState("");
   const date = dayjs().format("MM/DD/YYYY");
 
   useEffect(() => {
@@ -29,6 +29,7 @@ export default function GraphDisplay({ userSearch }) {
     vid.crossOrigin = "Anonymous";
     vid.loop = true;
     vid.muted = true;
+    vid.playsInline = true;
     vid.play();
     return vid;
   });
