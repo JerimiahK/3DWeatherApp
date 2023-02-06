@@ -26,10 +26,6 @@ export default function Scene() {
   };
 
   return (
-<<<<<<< HEAD
-=======
-    <>
->>>>>>> 65af30fed206db87247d2335e6284c61086e2121
       <Canvas
         camera={{ fov: "105", position: [0, 0, 27] }}
         style={{ width: "100%", height: "100vh", zIndex: "1" }}
@@ -110,10 +106,5 @@ export default function Scene() {
           ground={{ height: 45, radius: 100, scale: 300 }}
         />
       </Canvas>
-<<<<<<< HEAD
-=======
-      <Loader innerStyles={{ background: "#1e6893"}} />
-    </>
->>>>>>> 65af30fed206db87247d2335e6284c61086e2121
   );
 }
