@@ -19,7 +19,7 @@ export default function AppText() {
           <meshBasicMaterial>
             <GradientTexture
               stops={[0, 1]}
-              colors={["#00A0CE", "white"]} // Colors need to match the number of stops
+              colors={["#58cff7", "#fb49a2"]} // Colors need to match the number of stops
             />
           </meshBasicMaterial>
         </Text3D>
@@ -41,7 +41,7 @@ export default function AppText() {
           <meshBasicMaterial>
             <GradientTexture
               stops={[0, 1]}
-              colors={["#00A0CE", "white"]} // Colors need to match the number of stops
+              colors={["#58cff7", "#fb49a2"]} // Colors need to match the number of stops
             />
           </meshBasicMaterial>
         </Text3D>
