@@ -1,0 +1,6 @@
+skyVideo.mov filter=lfs diff=lfs merge=lfs -text
+moon2.glb filter=lfs diff=lfs merge=lfs -text
+tokyo_night.glb filter=lfs diff=lfs merge=lfs -text
+cloudy_mountain.glb filter=lfs diff=lfs merge=lfs -text
+cloud_lightning.glb filter=lfs diff=lfs merge=lfs -text
+sky.hdr filter=lfs diff=lfs merge=lfs -text
